@@ -22,13 +22,16 @@ public class Apprentice {
 
     public static double charToGrade(String grade) {
         if (grade == null) {
-            return -1; // handle null input gracefully
+            return -1;
         }
         Double value = GRADE_MAP.get(grade.toUpperCase());
         return (value == null) ? -1 : value;
     }
 
     public static String calculateGPA(int num_classes, String[] grades){
+        if (grades == null) {
+            throw new IllegalArgumentException("Grades array cannot be null!");
+        }
 
         double sum = 0;
         int i = 0;

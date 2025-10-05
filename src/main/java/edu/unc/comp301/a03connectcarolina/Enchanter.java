@@ -23,7 +23,7 @@ public class Enchanter {
         initCalendar();
     }
 
-    public void validateScan(String name, List<String> scannedEvents) throws CLEAlreadyScannedException, CLEEventNotFoundException{
+    public void validateScan(String name, List<String> scannedEvents) throws CLEEventNotFoundException, CLEAlreadyScannedException{
         if (!cleEvents.containsValue(name)){
             throw new CLEEventNotFoundException("CLE Event not found!");
         }

@@ -6,17 +6,18 @@ public class Sorcerer {
   private static Map<String, Set<Student>> enrollment = new HashMap<>();
 
     public static String calculateValidDay(int credits){
-        if(credits >= 0 && credits <= 55){
+        if(credits < 0){
+            throw new IllegalArgumentException();
+        }
+        else if(credits <= 55){
             return ("Wednesday");
         }
-        else if(credits > 55 && credits <= 100){
+        else if(credits <= 100){
             return ("Tuesday");
         }
-        else if(credits > 100){
-            return ("Monday");
-        }
         else{
-            throw new IllegalArgumentException();
+            return ("Monday");
+
         }
 
     }

@@ -45,7 +45,7 @@ public class Apprentice {
 
         }
         else{
-            throw new IllegalArgumentException("Make sure number of classes and the grades are correct!");
+            throw new IllegalArgumentException("Mismatch! Make sure number of classes and the grades are correct!");
         }
 
         return ("Your calculated GPA is: " + sum/num_classes);

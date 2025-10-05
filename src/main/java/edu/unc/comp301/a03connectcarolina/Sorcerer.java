@@ -5,7 +5,7 @@ import java.util.*;
 public class Sorcerer {
   private static Map<String, Set<Student>> enrollment = new HashMap<>();
 
-    public static String calculateValidDay(int credits){
+    public static String calculateValidDay(double credits){
         if(credits < 0){
             throw new IllegalArgumentException();
         }

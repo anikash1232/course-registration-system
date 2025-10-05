@@ -1,5 +1,6 @@
 package edu.unc.comp301.a03connectcarolina;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,10 @@ public class Enchanter {
     }
 
     public List<String> getCLECredits(String name, List<String> scannedEvents) throws CLEEventNotFoundException, CLEAlreadyScannedException{
+        if (scannedEvents == null){
+            return new ArrayList<>();
+        }
+
         try{
             validateScan(name, scannedEvents);
             System.out.println("Thank you for attending!");

@@ -52,11 +52,14 @@ public class Sorcerer {
 
     public static boolean duoAuthenticate(Student student, String day) throws DuoAuthenticationFailedException {
         boolean auth = false;
-        int studentID = student.getStudentID();
 
         if (student == null){
-            return auth;
+            return false;
         }
+
+        int studentID = student.getStudentID();
+
+
 
         if (("" + studentID).length() != 9) {
             throw new DuoAuthenticationFailedException("Invalid student ID.");

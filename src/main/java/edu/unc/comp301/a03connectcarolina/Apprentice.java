@@ -27,4 +27,27 @@ public class Apprentice {
         Double value = GRADE_MAP.get(grade.toUpperCase());
         return (value == null) ? -1 : value;
     }
+
+    public static String calculateGPA(int num_classes, String[] grades){
+
+        double sum = 0;
+        int i = 0;
+        if (num_classes > 0 && num_classes == grades.length){
+            for (String grade: grades){
+                if(charToGrade(grade) == -1){
+                    throw new IllegalArgumentException("Inputs are not valid!");
+                }
+
+                else{
+                    sum += charToGrade(grade);
+                }
+            }
+
+        }
+        else{
+            throw new IllegalArgumentException("Make sure number of classes and the grades are correct!");
+        }
+
+        return ("Your calculated GPA is: " + sum/num_classes);
+    }
 }

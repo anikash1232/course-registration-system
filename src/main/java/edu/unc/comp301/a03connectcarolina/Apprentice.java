@@ -35,7 +35,7 @@ public class Apprentice {
         if (num_classes > 0 && num_classes == grades.length){
             for (String grade: grades){
                 if(charToGrade(grade) == -1){
-                    throw new IllegalArgumentException("Inputs are not valid!");
+                    throw new IllegalArgumentException("Invalid grade!");
                 }
 
                 else{

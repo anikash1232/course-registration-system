@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AuthenticatorSimulation {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CLEAlreadyScannedException, CLEEventNotFoundException {
         Student student1 = new Student("Ani", 730761368, 0);
 
         Enchanter enchanter = new Enchanter();
